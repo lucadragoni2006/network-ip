@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/login.css">
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/login.js"></script>
     <title>login page</title>
 </head>
 
@@ -14,19 +15,19 @@
     <form class="form-container">
         <h2 id="head-element">LOGIN PAGE</h2>
         <div class="form-div">
-            <label for="user">Insert your username</label>
+            <label>Insert your username</label>
         </div>
         <div class="form-div text-div">
             <input type="text" placeholder="username" class="input" required id="username">
         </div>
         <div class="form-div">
-            <label for="password">Insert your password</label>
+            <label>Insert your password</label>
         </div>
         <div class="form-div text-div">
             <input type="password" placeholder="password" class="input" required id="password">
         </div>
         <div class="form-div button-div">
-            <button type="submit" id="button">LOGIN</button>
+            <input type="button" value="LOGIN" id="button">
         </div>
     </form>
 </body>
