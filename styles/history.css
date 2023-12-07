@@ -33,7 +33,15 @@ body {
 h2 {
     color: #0059e9;
     font-size: 2.5em;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    border-radius: 10px;
+    font-size: 1.75em;
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 10px;
 }
 
 #nav-container {
@@ -54,10 +62,20 @@ h2 {
     color: white;
     text-decoration: none;
     text-align: center;
+    transition: all 0.25s ease-in-out;
   }
 
 .nav-element:hover {
-    transition: 0.25s ease-in-out;
     background-color: white;
     color: rgb(35, 35, 58);
+}
+
+#logout {
+    background-color: #f41400;
+    transition: all 0.25s ease-in-out;
+}
+
+#logout:hover {
+    color: white;
+    background-color: #990f02;
 }

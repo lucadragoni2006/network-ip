@@ -3,6 +3,7 @@ function addToCookies(ip) {
 }
 
 $(document).ready(function() {
+
     $("#btn").click(function() {
         $("#network-id").remove();
         let arrayIp = $("#ip").children();
@@ -29,5 +30,9 @@ $(document).ready(function() {
             networkH3.html(networkIp.join("."));
             addToCookies(networkH3.html());
         }
+    })
+    
+    $("#history").click(function() {
+        window.location.href = "history.html";
     })
 })
