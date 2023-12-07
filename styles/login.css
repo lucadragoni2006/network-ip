@@ -20,7 +20,7 @@ body {
 
 label {
     font-weight: 800;
-    padding-left: 1.5em;
+    margin-left: 1.5em;
 }
 
 .form-container {
@@ -43,13 +43,13 @@ label {
     font-size: 1.05rem;
     color: rgba(0, 0, 0, 0.75);
     border: none;
-    border-radius: 100px;
-    width: 100%;
+    border-radius: 10px;
+    width: 95%;
     padding: 1.5rem;
 }
 
 .input:focus {
-    outline: 3px solid rgba(12, 255, 12, 0.6);
+    outline: 3px solid #0093E9;
 }
 
 #button {
@@ -72,4 +72,15 @@ label {
 .text-div {
     margin-top: 0.5em;
     margin-bottom: 2.2em;
+    text-align: center;
+}
+
+p {
+    font-weight: bold;
+    font-size: 13px;
+    color: red;
+    margin: 5px;
+    padding: 0;
+    text-align: left;
+    margin-left: 2em;
 }
