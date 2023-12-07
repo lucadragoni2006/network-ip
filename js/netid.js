@@ -1,5 +1,6 @@
 function addToCookies(ip) {
-    document.cookie = "ip" + document.cookie.split(';').length + "=" + ip + "; expires=Thu, 01 Jan 2025 00:00:00 UTC; path=/"
+    document.cookie = "ip" + document.cookie.split("; ").length + "=" + ip + "; expires=Thu, 01 Jan 2025 00:00:00 UTC; path=/"
+    console.log(document.cookie);
 }
 
 $(document).ready(function() {
@@ -35,4 +36,9 @@ $(document).ready(function() {
     $("#history").click(function() {
         window.location.href = "history.html";
     })
+
+    $("#logout").click(function() { 
+        document.cookie = "username=luca; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        window.location.href = "login.html";
+    });
 })

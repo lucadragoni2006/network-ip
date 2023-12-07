@@ -1,7 +1,10 @@
-if(document.cookie)
-    window.location.href = "netid.html"
-
 $(document).ready(function() {
+    let cookies = document.cookie.split("; ");
+    for (let i = 0; i < cookies.length; i++) {
+        if(cookies[i] == "username=luca")
+            window.location.href = "netid.html";
+    }
+
     $("#button").click(function() {
         let username = $("#username").val();
         let password = $("#password").val();
