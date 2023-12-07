@@ -1,5 +1,10 @@
+function addToCookies(ip) {
+    document.cookie = "ip" + document.cookie.split(';').length + "=" + ip + "; expires=Thu, 01 Jan 2025 00:00:00 UTC; path=/"
+}
+
 $(document).ready(function() {
     $("#btn").click(function() {
+        $("#network-id").remove();
         let arrayIp = $("#ip").children();
         let arraySubnet = $("#subnet").children();
         let networkIp = [];
@@ -9,7 +14,7 @@ $(document).ready(function() {
             arraySubnet[i] = arraySubnet[i].value;
         }
         for(let i = 0; i < arrayIp.length; i++) {
-            if(arrayIp[i] != null && arraySubnet[i] != null)
+            if(arrayIp[i] != "" && arraySubnet[i] != "")
                 networkIp[i] = arrayIp[i] & arraySubnet[i];
             else {
                 flag = false;
@@ -17,9 +22,12 @@ $(document).ready(function() {
             }
         }
         if(flag) {
-            let network = $("#network-ip");
-            network.html(networkIp.join("."));
-            network.css("padding", "10px 20px");
+            let networkH3 = $("<h3></h3>");
+            networkH3.attr("id", "network-id");
+            networkH3.css("padding", "10px 20px");
+            $("#btn").before(networkH3);
+            networkH3.html(networkIp.join("."));
+            addToCookies(networkH3.html());
         }
     })
 })

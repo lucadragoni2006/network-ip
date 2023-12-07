@@ -30,56 +30,11 @@ body {
     padding: 40px;
 }
 
-#subnet,
-#ip {
-    margin-bottom: 40px;
-}
-
 h2 {
     color: #0059e9;
     font-size: 2.5em;
     margin-bottom: 10px;
 }
-
-h3 {
-    border-radius: 10px;
-    font-size: 1.75em;
-    color: white; 
-    background-color: rgba(0, 0, 0, 0.8);
-    margin-bottom: 40px;
-    transition: height 0.5s ease-in-out;
-}
-
-input {
-    width: 90px;
-    padding: 4px 0;
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.25em;
-}
-
-input:focus {
-    outline: 3px solid #0093E9;
-}
-
-#btn {
-    width: 225px;
-    padding: 10px;
-    font-size: 1.25em;
-    background-color: #0093E9;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    transition: 0.5s all ease-in-out;
-}
-
-#btn:hover {
-    background-color: #4eaae0;
-    cursor: pointer;
-}
-
-/* Navbar css */
 
 #nav-container {
     background-color: rgb(35, 35, 58);
