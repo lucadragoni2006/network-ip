@@ -1,5 +1,13 @@
 $(document).ready(function() {
     let cookies = document.cookie.split("; ");
+    let flag = true;
+    for (let i = 0; i < cookies.length; i++) {
+        if(cookies[i] == "username=luca")
+            flag = false;
+    }
+    if(flag)
+        window.location.href = "login.html"
+
     for(let i = 0; i < cookies.length; i++) {
         console.log(cookies[i]);
         if(cookies[i] != "username=luca") {
