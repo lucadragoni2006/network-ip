@@ -1,6 +1,5 @@
 function addToCookies(ip) {
     document.cookie = "ip" + document.cookie.split("; ").length + "=" + ip + "; expires=Thu, 01 Jan 2025 00:00:00 UTC; path=/"
-    console.log(document.cookie);
 }
 
 $(document).ready(function() {
