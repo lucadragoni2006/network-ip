@@ -37,11 +37,17 @@ h2 {
 }
 
 h3 {
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 1.75em;
     color: white; 
     background-color: rgb(10, 35, 58);
     margin: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+h3:hover,
+.btn:hover {
+    cursor: pointer;
 }
 
 .btn {
@@ -54,6 +60,21 @@ h3 {
     border-radius: 10px;
     transition: 0.5s all ease-in-out;
     margin: 15px 0;
+}
+
+.remove {
+    position: relative;
+}
+
+.remove::after {
+    position: absolute;
+    background-color: #0093E9;
+    content: "";
+    padding: 10px;
+    border-radius: 100px;
+    top: -7px;
+    right: -7px;
+    line-height: 0;
 }
 
 #nav-container {
