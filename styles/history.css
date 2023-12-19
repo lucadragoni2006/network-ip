@@ -2,7 +2,7 @@
 
 * {
     font-family: "Poppins", sans-serif;
-    font-size: 1rem;
+    font-size: 16px;
     color: rgba(0, 0, 0, 0.75);
     letter-spacing: 0.025rem;
     box-sizing: border-box;
@@ -19,26 +19,27 @@ body {
 }
 
 #container {
-    width: 470px;
+    width: 420px;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background: rgba(255, 255, 255, 0.35);
-    border-radius: 50px;
-    padding: 40px;
+    border-radius: 10px;
+    padding: 2.5rem;
+    margin-top: 5rem;
 }
 
 h2 {
     color: #0059e9;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 h3 {
     border-radius: 5px;
-    font-size: 1.75em;
+    font-size: 1.75rem;
     color: white; 
     background-color: rgb(10, 35, 58);
     margin: 10px;
@@ -53,7 +54,7 @@ h3:hover,
 .btn {
     width: 225px;
     padding: 10px;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     background-color: #0093E9;
     color: white;
     border: none;
@@ -72,8 +73,8 @@ h3:hover,
     content: "";
     padding: 10px;
     border-radius: 100px;
-    top: -7px;
-    right: -7px;
+    top: -0.5rem;
+    right: -0.5rem;
     line-height: 0;
 }
 
@@ -91,7 +92,7 @@ h3:hover,
   
 .nav-element {
     display: block;
-    padding: 20px 30px;
+    padding: 1.25rem 1.85rem;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -111,4 +112,23 @@ h3:hover,
 #logout:hover {
     color: white;
     background-color: #990f02;
+}
+
+@media screen and (max-width: 450px) {
+    * {
+        font-size: 14px;
+    }
+
+    #container {
+        width: auto;
+        margin: 3%;
+    }
+
+    .nav-element{
+        padding: 0.9rem 1.15rem;
+    }
+
+    h3 {
+        font-size: 1.35rem;
+    }
 }
