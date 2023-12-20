@@ -1,3 +1,16 @@
+function shiftCookies() {
+    let cookies = document.cookie.split("; ");
+    let cookieIndex = 1;
+    for(let i = 0; i < cookies.length; i++) {
+        if(cookies[i] !== "username=luca") {
+            document.cookie = cookies[i] + "; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            let value = cookies[i].split("=")[1];
+            document.cookie = "ip" + cookieIndex + "=" + value + "; expires=Thu, 01 Jan 2025 00:00:00 UTC; path=/;";
+            cookieIndex++;
+        }
+    }
+}
+
 $(document).ready(function() {
     let cookies = document.cookie.split("; ");
     let flag = true;
@@ -52,6 +65,7 @@ $(document).ready(function() {
             let cookie = $(element).html();
             document.cookie = cookie.replace(": ", "=") + "; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         });
+        shiftCookies();
         location.reload();
     });
 });
