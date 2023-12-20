@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/login.css">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../js/login.js"></script>
     <title>Login Page</title>
@@ -18,7 +18,7 @@
         <div>
             <label>Insert your username</label>
         </div>
-        <div class="text-div">
+        <div class="text-div" id="username-container">
             <input type="text" placeholder="username" class="input" required id="username">
         </div>
         <div>
@@ -26,6 +26,7 @@
         </div>
         <div class="text-div">
             <input type="password" placeholder="password" class="input" required id="password">
+            <img src="../images/eye-closed.png" width="20px" id="eye">
         </div>
         <div>
             <input type="button" value="LOGIN" id="button">
