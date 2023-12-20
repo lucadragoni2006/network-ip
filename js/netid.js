@@ -32,6 +32,7 @@ $(document).ready(function() {
         window.location.href = "login.html"
 
     $("#btn").click(function() {
+        $("h4").remove();
         $("#network-id").remove();
         let arrayIp = $("#ip").children();
         let arraySubnet = $("#subnet").children();
@@ -48,6 +49,11 @@ $(document).ready(function() {
             $("#btn").before(networkH3);
             networkH3.html(networkIp.join("."));
             addToCookies(networkH3.html());
+        } else {
+            let errorMessage = $("<h4>Invalid IP or Subnet. Retry.</h4>");
+            errorMessage.css("color", "red");
+            errorMessage.css("margin-bottom", "20px");
+            $("#btn").before(errorMessage);
         }
     })
     
