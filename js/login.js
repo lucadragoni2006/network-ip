@@ -1,9 +1,12 @@
 $(document).ready(function() {
+    /* Il seguente codice controlla, una volta caricata l'intera pagina, se tra i cookies è presente il cookie contenente l'username, e di conseguenza reindirizza opportunamente l'utente alla pagina per calcolare le subnet  */
     let cookies = document.cookie.split("; ");
     for (let i = 0; i < cookies.length; i++) {
         if(cookies[i] == "username=luca")
             window.location.href = "netid.html";
     }
+
+    /* Dopo aver cliccato sul pulsante di login, viene effettuato un controllo delle credenziali. Se sono corrette l'utente viene reindirizzato, altrimenti viene mostrato il messaggio di errore */
 
     $("#button").click(function() {
         let username = $("#username");
@@ -19,9 +22,13 @@ $(document).ready(function() {
         }
     });
 
+    /* al click sul campo di testo relativo alla password o all'username, viene eliminato il messaggio di errore */
+
     $(".input").click(function() {
         $("p").remove();
     });
+
+    /* La funzione permette di rendere visibile o meno la password, cambiando opportunamente immagine */
 
     $("#eye").click(function() {
         let passwordField = $("#password");
