@@ -67,7 +67,7 @@ $(document).ready(function() {
         }
     })
 
-    /* La funzione reindirizza all'utente alla pagina principale, se si clicca sul pulsante della barra appplicazioni */
+    /* La funzione reindirizza all'utente alla pagina principale, se si clicca sul pulsante della barra di navigazione */
 
     $("#history").click(function() {
         window.location.href = "history.html";

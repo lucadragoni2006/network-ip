@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    /* Il seguente codice controlla, una volta caricata l'intera pagina, se tra i cookies è presente il cookie contenente l'username, e di conseguenza reindirizza opportunamente l'utente alla pagina per calcolare le subnet  */
+    /* Il seguente codice controlla, una volta caricata l'intera pagina, se tra i cookies è presente il cookie contenente l'username, e di conseguenza reindirizza opportunamente l'utente alla pagina per calcolare l'indirizzo di rete  */
     let cookies = document.cookie.split("; ");
     for (let i = 0; i < cookies.length; i++) {
         if(cookies[i] == "username=luca")

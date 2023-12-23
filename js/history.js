@@ -1,4 +1,4 @@
-/* la funzione permette di "spostare" indietro i cookie rimasti dopo l'eliminazione, in modo che nessun cookie possa essere sovrascritto in futuro, quando si aggiunge un altro elemento alla cronologia */
+/* la funzione permette di "spostare" indietro i cookie rimasti dopo l'eliminazione, in modo che nessun cookie potrà essere sovrascritto in futuro, quando si aggiunge un altro elemento alla cronologia */
 
 function shiftCookies() {
     let cookies = document.cookie.split("; ");
@@ -14,8 +14,6 @@ function shiftCookies() {
 }
 
 $(document).ready(function() {
-    /* Il seguente codice controlla, una volta caricata l'intera pagina, se tra i cookies è presente il cookie contenente l'username, e di conseguenza reindirizza opportunamente l'utente alla pagina di login. Il seguente ciclo for permette di caricare i precedenti ip di rete salvati nei cookies. */
-
     let cookies = document.cookie.split("; ");
     let flag = true;
     for (let i = 0; i < cookies.length; i++) {
@@ -72,7 +70,7 @@ $(document).ready(function() {
         }
     });
 
-    /* la funzione seguente permette di eliminare i cookies riguardanti la cronologia e di conseguenza elimina gli elementi precedentemente selezionati */
+    /* la funzione seguente permette di eliminare i cookies contenenti gli indirizzi IP, eliminando di conseguenza anche gli elementi contenenti gli IP */
 
     $("#delete").click(function() {
         $(".remove").each(function(index, element) {
